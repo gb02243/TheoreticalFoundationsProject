@@ -6,6 +6,7 @@ public class Transition {
     State from;
     State to;
 
+    // transition constructor
     Transition(char input, State from, State to) {
         this.input = input;
         this.from = from;

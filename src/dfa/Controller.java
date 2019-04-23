@@ -13,10 +13,12 @@ public class Controller {
     LinkedList<Transition> transitions;
     DFA dfa;
 
+    // construct controller
     Controller(File input) {
         getDescription(input);
     }
 
+    // convert description from string to DFA
     public void getDescription(File input) {
         String alphabet;
         String states;
@@ -69,6 +71,7 @@ public class Controller {
 
     }
 
+    // get state from graph
     public State getState(char c) {
         State state = null;
         for (int i = 0; i < this.states.size(); i++) {
@@ -79,10 +82,12 @@ public class Controller {
         return state;
     }
 
+    // build dfa from converted description
     public void build() {
         dfa = new DFA(start, accepts);
     }
 
+    // check if input string has any characters that arent in the alphabet
     public boolean checkAlphabet(String input){
         boolean failed = false;
         for (int i = 0; !failed && i < alphabet.length(); i++) {
@@ -91,6 +96,7 @@ public class Controller {
         return failed;
     }
 
+    // test if input is accepted by the DFA
     public void testInput(String input) {
         build();
 
@@ -105,7 +111,7 @@ public class Controller {
         }
     }
 
-    // for testing
+    // print converted description
     public void printDescription() {
         System.out.println("Alphabet: " + alphabet);
         System.out.print("States: ");

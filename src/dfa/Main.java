@@ -41,7 +41,7 @@ public class Main {
         // print description
         //c.printDescription();
 
-        // Get test string
+        // get test string
         System.out.println("Enter a string to test: ");
         while (true) {
             scanner = new Scanner(System.in);
