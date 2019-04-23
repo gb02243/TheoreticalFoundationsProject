@@ -22,7 +22,7 @@ public class Main {
                 System.out.println("File not found.");
             }
         } else { // get file from input
-            scanner = new Scanner(System.in);
+           scanner = new Scanner(System.in);
             while (fileAccepted == false) {
                 System.out.println("Please enter the Controller Description file name: ");
                 String input = scanner.next();
@@ -41,14 +41,23 @@ public class Main {
         //c.printDescription();
 
         // get test string
+        boolean moreTests = true;
         System.out.println("Enter a string to test: ");
-        while (true) {
+        while (moreTests == true) {
             scanner = new Scanner(System.in);
             String input = scanner.next();
-            if (c.checkAlphabet(input) == false) {
+            if(c.checkAlphabet(input) == false){
                 c.testInput(input);
-            } else {
+            }else{
                 System.out.println("Input contains a character that is not in the alphabet.");
+            }
+            System.out.println("Do you have another string to test? (y/n)");
+            String more = scanner.next();
+            if (more.contains("y")){
+                moreTests = true;
+            }else{
+                moreTests = false;
+                break;
             }
             System.out.println("\nEnter another string to test:");
         }
