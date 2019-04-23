@@ -92,10 +92,14 @@ public class Controller {
     	boolean failed = false;
     		for (int i = 0; !failed && i < alphabet.length(); i++) {
     			try {
-    			failed = (input.indexOf(alphabet.charAt(i))>0);
+    				if(input.length()>alphabet.length()) {
+    					failed = (input.indexOf(alphabet.charAt(i))<0);
+    				}
+    				else
+    					failed = (input.indexOf(alphabet.charAt(i))>0);
     			}
     			catch(NullPointerException e) {
-    				System.out.println("Input contains a character that is not in the alphabet.");
+    	    		System.out.println("Input contains a character that is not in the alphabet.");
     	    		throw e;
     	    	}
     		}
