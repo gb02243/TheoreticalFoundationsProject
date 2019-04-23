@@ -48,6 +48,8 @@ public class Main {
             String input = scanner.next();
             if(c.checkAlphabet(input)){
                 c.testInput(input);
+            }else{
+                System.out.println("Input contains a character that is not in the alphabet.");
             }
             System.out.println("Enter another string to test:");
         }
