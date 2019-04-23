@@ -7,12 +7,12 @@ public class State {
     private char label;
 
     // state constructor
-    State(char label){
+    State(char label) {
         this.label = label;
     }
 
     // adds a transition/edge
-    public void addTransition(Transition t){
+    public void addTransition(Transition t) {
         transitions.add(t);
     }
 
@@ -28,7 +28,7 @@ public class State {
     }
 
     // returns the character of this state
-    public char getLabel(){
+    public char getLabel() {
         return label;
     }
 }

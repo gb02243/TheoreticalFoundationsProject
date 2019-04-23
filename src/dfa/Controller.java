@@ -88,7 +88,7 @@ public class Controller {
     }
 
     // check if input string has any characters that arent in the alphabet
-    public boolean checkAlphabet(String input){
+    public boolean checkAlphabet(String input) {
         boolean failed = false;
         for (int i = 0; !failed && i < alphabet.length(); i++) {
             failed = (input.indexOf(alphabet.charAt(i)) < 0);
@@ -104,9 +104,9 @@ public class Controller {
         for (int i = 0; i < input.length(); i++) {
             accepted = dfa.traverseDFA(input.charAt(i));
         }
-        if (accepted == true){
+        if (accepted == true) {
             System.out.println("String is accepted.");
-        }else{
+        } else {
             System.out.println("String is not accepted.");
         }
     }

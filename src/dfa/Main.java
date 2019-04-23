@@ -4,7 +4,6 @@ import java.io.File;
 import java.util.Scanner;
 
 public class Main {
-
     public static void main(String[] args) {
         boolean fileAccepted = false;
         String filename;
@@ -23,7 +22,7 @@ public class Main {
                 System.out.println("File not found.");
             }
         } else { // get file from input
-           scanner = new Scanner(System.in);
+            scanner = new Scanner(System.in);
             while (fileAccepted == false) {
                 System.out.println("Please enter the Controller Description file name: ");
                 String input = scanner.next();
@@ -46,9 +45,9 @@ public class Main {
         while (true) {
             scanner = new Scanner(System.in);
             String input = scanner.next();
-            if(c.checkAlphabet(input) == false){
+            if (c.checkAlphabet(input) == false) {
                 c.testInput(input);
-            }else{
+            } else {
                 System.out.println("Input contains a character that is not in the alphabet.");
             }
             System.out.println("\nEnter another string to test:");
