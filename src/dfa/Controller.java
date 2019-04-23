@@ -84,8 +84,11 @@ public class Controller {
     }
 
     public boolean checkAlphabet(String input){
-        // TODO implement
-        return true;
+        boolean failed = false;
+        for (int i = 0; !failed && i < alphabet.length(); i++) {
+            failed = (input.indexOf(alphabet.charAt(i)) < 0);
+        }
+        return failed;
     }
 
     public void testInput(String input) {
