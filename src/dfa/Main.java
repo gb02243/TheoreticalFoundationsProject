@@ -49,9 +49,9 @@ public class Main {
             if(c.checkAlphabet(input) == false){
                 c.testInput(input);
             }else{
-                System.out.println("Input contains a character that is not in the alphabet.\n");
+                System.out.println("Input contains a character that is not in the alphabet.");
             }
-            System.out.println("Enter another string to test:");
+            System.out.println("\nEnter another string to test:");
         }
     }
 }
