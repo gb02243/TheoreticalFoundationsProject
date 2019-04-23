@@ -46,10 +46,13 @@ public class Main {
         while (moreTests == true) {
             scanner = new Scanner(System.in);
             String input = scanner.next();
-            if(c.checkAlphabet(input) == false){
-                c.testInput(input);
-            }else{
-                System.out.println("Input contains a character that is not in the alphabet.");
+            try {
+            	if(c.checkAlphabet(input) == false){
+            		c.testInput(input);
+            	}
+            }
+            catch(NullPointerException e) {
+            	System.out.println("Input contains a character that is not in the alphabet.");
             }
             System.out.println("Do you have another string to test? (y/n)");
             String more = scanner.next();
