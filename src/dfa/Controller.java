@@ -95,7 +95,7 @@ public class Controller {
     			failed = (input.indexOf(alphabet.charAt(i))>0);
     			}
     			catch(NullPointerException e) {
-    	    		System.out.println("Not there bitch");
+    				System.out.println("Input contains a character that is not in the alphabet.");
     	    		throw e;
     	    	}
     		}

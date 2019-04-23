@@ -50,6 +50,9 @@ public class Main {
             	if(c.checkAlphabet(input) == false){
             		c.testInput(input);
             	}
+            	else {
+            		System.out.println("Input contains a character that is not in the alphabet.");
+            	}
             }
             catch(NullPointerException e) {
             	System.out.println("Input contains a character that is not in the alphabet.");
