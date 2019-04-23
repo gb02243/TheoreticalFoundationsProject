@@ -83,6 +83,11 @@ public class Controller {
         dfa = new DFA(start, accepts);
     }
 
+    public boolean checkAlphabet(String input){
+        // TODO implement
+        return true;
+    }
+
     public void testInput(String input) {
         build();
 

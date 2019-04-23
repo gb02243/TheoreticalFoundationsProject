@@ -46,7 +46,9 @@ public class Main {
         while (true) {
             scanner = new Scanner(System.in);
             String input = scanner.next();
-            c.testInput(input);
+            if(c.checkAlphabet(input)){
+                c.testInput(input);
+            }
             System.out.println("Enter another string to test:");
         }
     }
