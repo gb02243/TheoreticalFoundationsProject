@@ -47,7 +47,7 @@ public class Main {
             scanner = new Scanner(System.in);
             String input = scanner.next();
             try {
-            	if(c.checkAlphabet(input) == false){
+            	if(c.checkAlphabet(input) == true){
             		c.testInput(input);
             	}
             	else {
