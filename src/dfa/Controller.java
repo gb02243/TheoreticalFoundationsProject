@@ -86,24 +86,19 @@ public class Controller {
     public void build() {
         dfa = new DFA(start, accepts);
     }
-    
+
     // check if input string has any characters that arent in the alphabet
     public boolean checkAlphabet(String input) {
-    	boolean failed = false;
-    		for (int i = 0; !failed && i < alphabet.length(); i++) {
-    			try {
-    				if(input.length()>alphabet.length()) {
-    					failed = (input.indexOf(alphabet.charAt(i))<0);
-    				}
-    				else
-    					failed = (input.indexOf(alphabet.charAt(i))>0);
-    			}
-    			catch(NullPointerException e) {
-    	    		System.out.println("Input contains a character that is not in the alphabet.");
-    	    		throw e;
-    	    	}
-    		}
-    		return failed;
+        boolean[] isvalid = new boolean[Character.MAX_VALUE + 1];
+        for (char c : alphabet.toCharArray()) {
+            isvalid[c] = true;
+        }
+        for (char c : input.toCharArray()) {
+            if (!isvalid[c]) {
+                return true;
+            }
+        }
+        return false;
     }
 
     // test if input is accepted by the DFA
